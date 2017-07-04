@@ -1791,12 +1791,12 @@
     "System.Runtime.CompilerServices.Unsafe": {
       "StableVersions": [
         "4.0.0",
-        "4.3.0"
+        "4.3.1"
       ],
-      "BaselineVersion": "4.3.0",
+      "BaselineVersion": "4.3.1",
       "AssemblyVersionInPackageVersion": {
         "4.0.0.0": "4.0.0",
-        "4.0.2.0": "4.3.0"
+        "4.0.2.0": "4.3.1"
       }
     },
     "System.Runtime.CompilerServices.VisualC": {

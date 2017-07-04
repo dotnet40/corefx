@@ -27,6 +27,10 @@
       <OSGroup>Windows_NT</OSGroup>  
       <TargetGroup>net463</TargetGroup>  
     </Project>  
+    <Project Include="System.Security.Cryptography.Algorithms.csproj">  
+      <OSGroup>Windows_NT</OSGroup>  
+      <TargetGroup>net40</TargetGroup>  
+    </Project>  
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.traversal.targets))\dir.traversal.targets" />
 </Project>

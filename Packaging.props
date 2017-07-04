@@ -1,6 +1,6 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PreReleaseLabel>servicing</PreReleaseLabel>
+    <PreReleaseLabel>net40</PreReleaseLabel>
     <PackageDescriptionFile>$(ProjectDir)pkg/descriptions.json</PackageDescriptionFile>
     <PackageLicenseFile>$(ProjectDir)pkg/dotnet_library_license.txt</PackageLicenseFile>
     <PackageThirdPartyNoticesFile>$(ProjectDir)pkg/ThirdPartyNotices.txt</PackageThirdPartyNoticesFile>
@@ -21,6 +21,7 @@
 
     <!-- by default all packages will use the same version which revs with respect to product version -->
     <PackageVersion Condition="'$(PackageVersion)' == ''">4.3.0</PackageVersion>
+    <IncludeBuildNumberInPackageVersion>False</IncludeBuildNumberInPackageVersion>
   </PropertyGroup>
 
   <Import Condition="Exists('pkg/baseline/baseline.props')" Project="pkg/baseline/baseline.props" />
@@ -28,7 +29,7 @@
   <ItemGroup Condition="'$(MSBuildProjectExtension)' == '.pkgproj'">
     <ValidatePackageSuppression Include="SuppressNETStandardInference">
       <!-- desktop assemblies must version past NETStandard refs -->
-      <Value>.NETFramework,Version=v4.6;.NETFramework,Version=v4.6.1;.NETFramework,Version=v4.6.2;.NETFramework,Version=v4.6.3</Value>
+      <Value>.NETFramework,Version=v4.0;.NETFramework,Version=v4.6;.NETFramework,Version=v4.6.1;.NETFramework,Version=v4.6.2;.NETFramework,Version=v4.6.3</Value>
     </ValidatePackageSuppression>
   </ItemGroup>
 
